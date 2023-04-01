@@ -10,7 +10,7 @@ test('test resolves with await', async () => {
 });
 
 
-it('validates my json', () => {
+it('validates my json', async () => {
     const schema = {
         properties:
         {
@@ -19,6 +19,6 @@ it('validates my json', () => {
             title: { type: 'string' },
             completed: { type: 'boolean' }
         },
-    }; const data = some();
+    }; const data = await some();
     expect(data).toMatchSchema(schema);
 });
